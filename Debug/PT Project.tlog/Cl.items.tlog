@@ -3,8 +3,6 @@ D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionChngBGClr.cpp;D:\ITI\Da
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionChngDrawClr.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionChngDrawClr.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionChngFillClr.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionChngFillClr.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionDelete.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionDelete.obj
-D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionLoad.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionLoad.obj
-D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionSave.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionSave.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionSelect.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionSelect.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionSendToBack.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionSendToBack.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionSendToFront.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionSendToFront.obj
@@ -46,7 +44,6 @@ D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jmemnobs.
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jquant1.c;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\jquant1.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jquant2.c;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\jquant2.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jutils.c;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\jutils.obj
-D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\colors.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\colors.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Figures\CFigure.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\CFigure.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Figures\CSquare.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\CSquare.obj
 D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Actions\ActionAddSquare.cpp;D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\ActionAddSquare.obj

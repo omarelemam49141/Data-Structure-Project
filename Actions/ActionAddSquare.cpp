@@ -57,7 +57,7 @@ void ActionAddSquare::Execute()
 
 		
 	//Step 3 - Create a Square with the parameters read from the user
-	CFigure *R=new CSquare(topLeft, SideLength, SqrGfxInfo);
+	CSquare *R=new CSquare(topLeft, SideLength, SqrGfxInfo);
 
 	//Step 4 - Add the Square to the list of figures
 	pManager->AddFigure(R);

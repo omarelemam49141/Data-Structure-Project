@@ -134,8 +134,6 @@
     <ClCompile Include="ActionChngDrawClr.cpp" />
     <ClCompile Include="ActionChngFillClr.cpp" />
     <ClCompile Include="ActionDelete.cpp" />
-    <ClCompile Include="ActionLoad.cpp" />
-    <ClCompile Include="ActionSave.cpp" />
     <ClCompile Include="ActionSelect.cpp" />
     <ClCompile Include="ActionSendToBack.cpp" />
     <ClCompile Include="ActionSendToFront.cpp" />
@@ -177,7 +175,6 @@
     <ClCompile Include="CMUgraphicsLib\jpeg\jquant1.c" />
     <ClCompile Include="CMUgraphicsLib\jpeg\jquant2.c" />
     <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c" />
-    <ClCompile Include="colors.cpp" />
     <ClCompile Include="Figures\CFigure.cpp" />
     <ClCompile Include="Figures\CSquare.cpp" />
     <ClCompile Include="Actions\ActionAddSquare.cpp" />
@@ -192,8 +189,6 @@
     <ClInclude Include="ActionChngDrawClr.h" />
     <ClInclude Include="ActionChngFillClr.h" />
     <ClInclude Include="ActionDelete.h" />
-    <ClInclude Include="ActionLoad.h" />
-    <ClInclude Include="ActionSave.h" />
     <ClInclude Include="ActionSelect.h" />
     <ClInclude Include="ActionSendToBack.h" />
     <ClInclude Include="ActionSendToFront.h" />
