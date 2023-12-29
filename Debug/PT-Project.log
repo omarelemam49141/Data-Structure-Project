@@ -1,0 +1,81 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  main.cpp
+  ActionAddHexagon.cpp
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionAddHexagon.cpp(56,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\ActionAddHexagon.cpp(57,38): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  ApplicationManager.cpp
+  GUI.cpp
+  ActionAddSquare.cpp
+  CSquare.cpp
+  CFigure.cpp
+  windowinput.cpp
+  mousequeue.cpp
+  keyqueue.cpp
+  image.cpp
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
+  CMUgraphics.cpp
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(257,13): warning C4101: 'iY': unreferenced local variable
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(751,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(1164,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(1171,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
+  auxil.cpp
+  ActionChngFigureClr.cpp
+  CHexagon.cpp
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CHexagon.cpp(71,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CHexagon.cpp(72,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  CEllipse.cpp
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CEllipse.cpp(43,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CEllipse.cpp(44,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  ActionSelect.cpp
+  ActionDelete.cpp
+  ActionChngFillClr.cpp
+  ActionChngDrawClr.cpp
+  Generating Code...
+  Compiling...
+  ActionChngBGClr.cpp
+  ActionAddEllipse.cpp
+  Generating Code...
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  jutils.c
+  jquant2.c
+  jquant1.c
+  jmemnobs.c
+  jmemmgr.c
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jmemmgr.c(1103,19): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jmemmgr.c(1106,11): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  jidctred.c
+  jidctint.c
+  jidctfst.c
+  jidctflt.c
+  jerror.c
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jerror.c(169,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpeg\jerror.c(171,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  jdtrans.c
+  jdsample.c
+  jdpostct.c
+  jdphuff.c
+  jdmerge.c
+  jdmaster.c
+  jdmarker.c
+  jdmainct.c
+  jdinput.c
+  jdhuff.c
+  Generating Code...
+  Compiling...
+  jddctmgr.c
+  jdcolor.c
+  jdcoefct.c
+  jdatasrc.c
+  jdapistd.c
+  jdapimin.c
+  jcparam.c
+  jcomapi.c
+  jpegload.c
+D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\CMUgraphicsLib\jpegload.c(23,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
+ActionAddEllipse.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  PT-Project.vcxproj -> D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\PT Project.exe
