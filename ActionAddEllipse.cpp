@@ -52,7 +52,7 @@ void ActionAddEllipse::Execute()
 
 	//Step 3 - Create an ellipse with the parameters read from the user
 	//check if exceeding the drawing area
-	CEllipse* R = new CEllipse(left, right, SqrGfxInfo);
+	CFigure* R = new CEllipse(left, right, SqrGfxInfo);
 	if (pGUI->ExceedDrawingArea(left.x, left.y, right.x, right.y))
 	{
 		pGUI->PrintMessage("Shape exceeding the drawing area");

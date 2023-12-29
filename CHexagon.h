@@ -12,8 +12,11 @@ private:
 	int vertexes;
 public:
 	CHexagon(int *, int*, int, GfxInfo FigureGfxInfo);
+	CHexagon();
 	virtual void DrawMe(GUI* pOut) const;
 	bool IsPointInside(int x, int y);
 	virtual string GetInfo();
-	virtual void resizeMe(int factor);
+	//asma
+	virtual void Save(ofstream&);
+	virtual void Load(ifstream&);
 };

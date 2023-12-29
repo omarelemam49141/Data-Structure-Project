@@ -10,6 +10,12 @@
 #include "ActionDelete.h"
 #include "ActionSendToBack.h"
 #include "ActionSendToFront.h"
+#include "ActionSave.h"
+#include "ActionLoad.h"
+#include "CMUgraphicsLib/colors.h"
+#include <fstream>
+#include <iostream>
+#include <string>
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -90,6 +96,12 @@ Action* ApplicationManager::CreateAction(ActionType ActType)
 		case BRNG_FRNT:
 			newAct = new ActionSendToFront(this);
 			break;
+		case SAVE:
+			newAct = new ActionSave(this, FigCount, 0);
+			break;
+		case LOAD:
+			newAct = new ActionLoad(this);
+			break;
 		case EXIT:
 			///create ExitAction here
 			break;
@@ -152,6 +164,61 @@ CFigure *ApplicationManager::GetFigure(int x, int y) const
 	}
 
 	return NULL;
+}
+
+
+void ApplicationManager::deleteALLFig()
+{
+	for (int i = 0; i < FigCount; i++)
+	{
+		FigList[i] = NULL;
+
+	}
+
+	FigCount = 0;
+
+}
+//==================================================================================//
+//							Save	load						                        //
+//==================================================================================//
+
+//Convert from color object to string to save
+string ApplicationManager::colorString(color ClrObj) const
+{
+	if (ClrObj == WHITE) return "WHITE";
+	else if (ClrObj == BLACK) return "BLACK";
+	else if (ClrObj == BROWN) return "BROWN";
+	else if (ClrObj == PURPLE) return "PURPLE";
+	else if (ClrObj == PINK) return "PINK";
+	else if (ClrObj == RED) return "RED";
+	else if (ClrObj == ORANGE) return "ORANGE";
+	else if (ClrObj == YELLOW) return "YELLOW";
+	else if (ClrObj == GREEN) return "GREEN";
+	else if (ClrObj == BLUE) return "BLUE";
+	else return "GREEN";
+}
+color ApplicationManager::ColorObject(string ClrStr) const
+{
+	if (ClrStr == "WHITE") return WHITE;
+	else if (ClrStr == "BLACK") return BLACK;
+	else if (ClrStr == "BROWN") return BROWN;
+	else if (ClrStr == "PURPLE") return PURPLE;
+	else if (ClrStr == "PINK") return PINK;
+	else if (ClrStr == "RED") return RED;
+	else if (ClrStr == "ORANGE") return ORANGE;
+	else if (ClrStr == "YELLOW") return YELLOW;
+	else if (ClrStr == "GREEN") return GREEN;
+	else if (ClrStr == "BLUE") return BLUE;
+	else return BLUE;
+}
+
+void ApplicationManager::SaveAll(ofstream& Out)
+{
+	for (int i = 0; i < FigCount; i++) {
+
+		FigList[i]->Save(Out);
+
+	}
 }
 //==================================================================================//
 //							Interface Management Functions							//

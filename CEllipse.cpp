@@ -1,10 +1,18 @@
 #include "CEllipse.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
+
 CEllipse::CEllipse(Point P1, Point P2, GfxInfo FigureGfxInfo) :CFigure(FigureGfxInfo)
 {
 	pointone = P1;
 	pointtwo = P2;
 }
 
+CEllipse::CEllipse() {
+	pointone = {};
+	pointtwo = {};
+}
 
 void CEllipse::DrawMe(GUI* pGUI) const
 {
@@ -28,22 +36,38 @@ string CEllipse::GetInfo()
         " - Second point: (" + to_string(pointtwo.x) + ", " + to_string(pointtwo.y) + ")";
 }
 
-//omar
-void CEllipse::resizeMe(int factor)
-{
-    // Calculate the center of the ellipse
-    double centerX = (pointone.x + pointtwo.x) / 2;
-    double centerY = (pointone.y + pointtwo.y) / 2;
+//asma save
+void CEllipse::Save(ofstream& OutFile) {
 
-    // Resize the distance from the center to the second point by the factor
-    double newRadiusX = factor * (pointtwo.x - centerX) / 2;
-    double newRadiusY = factor * (pointtwo.y - centerY) / 2;
+	OutFile << "CEllipse\t"
+		<< this->pointone.x << "\t"
+		<< this->pointone.y << "\t"
+		<< this->pointtwo.x << "\t"
+		<< this->pointtwo.y << "\t"
+		<< this->ColorString(this->FigGfxInfo.DrawClr) << "\t";
+	// check figure is filled or not
+	if (this->FigGfxInfo.isFilled)
+		OutFile << this->ColorString(this->FigGfxInfo.FillClr) << "\n";
+	else
+		OutFile << "NO_FILL\n";
+}
+void CEllipse::Load(ifstream& Infile) {
+	string ellipseData;
+	Infile >> pointone.x
+		>> pointone.y
+		>> pointtwo.x
+		>> pointtwo.y;
 
-    // Update the coordinates of the second point
-    pointtwo.x = centerX + newRadiusX;
-    pointtwo.y = centerY + newRadiusY;
+	Infile >> ellipseData;
+	FigGfxInfo.DrawClr = this->ColorObject(ellipseData);
 
-    //check if it exceeds the drawing area
+	Infile >> ellipseData;
+	FigGfxInfo.FillClr = this->ColorObject(ellipseData);
+	FigGfxInfo.isFilled = true;
+
+	this->show();
+	this->FigGfxInfo.BorderWdth = 3;
+	this->SetSelected(false);
 }
 
 //omar //does it excceds the drawing area

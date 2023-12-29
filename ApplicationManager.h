@@ -3,6 +3,9 @@
 
 #include "DEFS.h"
 #include "Figures\CFigure.h"
+//asmaa
+#include<fstream>
+#include "CMUgraphicsLib/colors.h"
 
 class Action;	//Forward Declaration
 
@@ -51,6 +54,11 @@ public:
 	int ApplicationManager::GetSelectedFigureIndex();
 	void ApplicationManager::sendFigToFront(int index);
 	void ApplicationManager::sendFigToBack(int index);
+	//Asmaa
+	void deleteALLFig();
+	string colorString(color) const;
+	void SaveAll(ofstream& Out);
+	color ColorObject(string) const;
 };
 
 #endif

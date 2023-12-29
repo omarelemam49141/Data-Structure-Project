@@ -10,13 +10,15 @@ private:
 	int length;
 public:
 	CSquare(Point , int, GfxInfo FigureGfxInfo );
+	CSquare();
 	virtual void DrawMe(GUI* pOut) const;
 	//omar
 	bool IsPointInside(int x, int y);
 	//omar
 	virtual string GetInfo();
-	//omar
-	virtual void resizeMe(int factor);
+	//asma
+	virtual void Save(ofstream&);
+	virtual void Load(ifstream&);
 };
 
 #endif

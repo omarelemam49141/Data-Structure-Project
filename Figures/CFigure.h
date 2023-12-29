@@ -16,6 +16,7 @@ protected:
 
 public:
 	CFigure(GfxInfo FigureGfxInfo);
+	CFigure();
 	void SetSelected(bool );	//select/unselect the figure
 	bool IsSelected() const;	//check whether fig is selected
 
@@ -28,7 +29,13 @@ public:
 	virtual bool IsPointInside(int x, int y)=0;
 	virtual string GetInfo() = 0;
 
-	virtual void resizeMe(int factor) = 0;
+	//Save asma
+	string ColorString(color) const;
+	color ColorObject(string) const;
+	virtual void Save(ofstream& OutFile) = 0;
+	virtual void Load(ifstream& File) = 0;
+	void show();
+	bool IsHidden();
 
 	///The following functions should be supported by the figure class
 	///It should be overridden by each inherited figure

@@ -131,6 +131,8 @@ ActionType GUI::MapInputToActionType() const
 			case ITM_DELETE: return DEL;
 			case ITM_MOVE_BACK: return SEND_BACK;
 			case ITM_MOVE_FRONT: return BRNG_FRNT;
+			case ITM_SAVE:return SAVE;
+			case ITM_LOAD:return LOAD;
 			case ITM_EXIT: return EXIT;	
 			
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -204,6 +206,8 @@ void GUI::CreateDrawToolBar() const
 	MenuItemImages[ITM_DELETE] = "images\\MenuItems\\delete.jpeg";
 	MenuItemImages[ITM_MOVE_BACK] = "images\\MenuItems\\back.jpg";
 	MenuItemImages[ITM_MOVE_FRONT] = "images\\MenuItems\\front.jpg";
+	MenuItemImages[ITM_SAVE] = "images\\MenuItems\\save-icon.jpg";
+	MenuItemImages[ITM_LOAD] = "images\\MenuItems\\load.jpg";
 	MenuItemImages[ITM_EXIT] = "images\\MenuItems\\Menu_Exit.jpg";
 	//TODO: Prepare images for each menu item and add it to the list
 

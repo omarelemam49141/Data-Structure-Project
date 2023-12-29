@@ -37,10 +37,10 @@ public:
 
 	//Omar
 	//Draw Ellipse
-	void GUI::DrawEllipse(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) const;
+	void DrawEllipse(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) const;
 	//Omar
 	//Draw Hexagon
-	void GUI::DrawHexagon(int* xCoords, int* yCoords, int vertexes, GfxInfo RectGfxInfo, bool selected) const;
+	void DrawHexagon(int* xCoords, int* yCoords, int vertexes, GfxInfo RectGfxInfo, bool selected) const;
 	
 	///TODO: Make similar functions for drawing all other figures.
 	

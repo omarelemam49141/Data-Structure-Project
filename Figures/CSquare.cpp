@@ -1,11 +1,19 @@
 #include "CSquare.h"
+#include <iostream>
+#include <fstream>
+using namespace std;
 
 CSquare::CSquare(Point P1, int len, GfxInfo FigureGfxInfo):CFigure(FigureGfxInfo)
 {
-	TopLeftCorner = P1;
+	TopLeftCorner.x = P1.x;
+	TopLeftCorner.y = P1.y;
 	length = len;
 }
 	
+CSquare::CSquare(){
+	TopLeftCorner = {};
+	length = 1;
+}
 
 void CSquare::DrawMe(GUI* pGUI) const
 {
@@ -27,8 +35,38 @@ string CSquare::GetInfo()
 	return "First point: (" + to_string(TopLeftCorner.x) + ", " + to_string(TopLeftCorner.y) + ")" + " - side length is: " + to_string(length);
 }
 
-//omar resize
-void CSquare::resizeMe(int factor)
-{
-	length *= factor;
+//asmaa save
+void CSquare::Save(ofstream& OutFile) {
+
+	cout << "i get called";
+	OutFile << "CSquare\t"
+		<< this->TopLeftCorner.x << "\t"
+		<< this->TopLeftCorner.y << "\t"
+		<< this->length << "\t"
+		<< this->ColorString(this->FigGfxInfo.DrawClr) << "\t";
+
+	if (this->FigGfxInfo.isFilled)
+		OutFile << this->ColorString(this->FigGfxInfo.FillClr) << "\n";
+	else
+		OutFile << "NO_FILL\n";
+}
+void CSquare::Load(ifstream& Infile) {
+
+	string squareData;
+	Infile
+		>> TopLeftCorner.x
+		>> TopLeftCorner.y
+		>> length;
+
+	Infile >> squareData;
+	FigGfxInfo.DrawClr = this->ColorObject(squareData);
+
+	Infile >> squareData;
+	FigGfxInfo.FillClr = this->ColorObject(squareData);
+	FigGfxInfo.isFilled = true;
+
+	this->show();
+	this->FigGfxInfo.BorderWdth = 3; //pass 3 as default value for borderWidth
+	this->SetSelected(false);
+
 }
