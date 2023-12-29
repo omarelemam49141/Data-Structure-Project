@@ -25,6 +25,8 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_CHNG_BK_CLR,
 	ITM_CHNG_FIG_CLR,
 	ITM_DELETE,
+	ITM_MOVE_BACK,
+	ITM_MOVE_FRONT,
 	
 	//TODO: Add more items names here
 

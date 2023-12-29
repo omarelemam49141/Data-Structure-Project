@@ -135,6 +135,8 @@
     <ClCompile Include="ActionChngFillClr.cpp" />
     <ClCompile Include="ActionDelete.cpp" />
     <ClCompile Include="ActionSelect.cpp" />
+    <ClCompile Include="ActionSendToBack.cpp" />
+    <ClCompile Include="ActionSendToFront.cpp" />
     <ClCompile Include="CEllipse.cpp" />
     <ClCompile Include="CHexagon.cpp" />
     <ClCompile Include="ActionChngFigureClr.cpp" />
@@ -188,6 +190,8 @@
     <ClInclude Include="ActionChngFillClr.h" />
     <ClInclude Include="ActionDelete.h" />
     <ClInclude Include="ActionSelect.h" />
+    <ClInclude Include="ActionSendToBack.h" />
+    <ClInclude Include="ActionSendToFront.h" />
     <ClInclude Include="CEllipse.h" />
     <ClInclude Include="CHexagon.h" />
     <ClInclude Include="ActionChngFigureClr.h" />

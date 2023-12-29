@@ -8,6 +8,8 @@
 #include "ActionSelect.h"
 #include "ActionChngFigureClr.h"
 #include "ActionDelete.h"
+#include "ActionSendToBack.h"
+#include "ActionSendToFront.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -81,6 +83,12 @@ Action* ApplicationManager::CreateAction(ActionType ActType)
 			break;
 		case DEL:
 			newAct = new ActionDelete(this);
+			break;
+		case SEND_BACK:
+			newAct = new ActionSendToBack(this);
+			break;
+		case BRNG_FRNT:
+			newAct = new ActionSendToFront(this);
 			break;
 		case EXIT:
 			///create ExitAction here
@@ -188,6 +196,44 @@ int ApplicationManager::GetCount()
 {
 	return FigCount;
 }
+
+//BringToFront/back
+int ApplicationManager::GetSelectedFigureIndex()
+{
+	for (int i = FigCount - 1; i >= 0; i--)
+	{
+		if (FigList[i]->IsSelected())
+			return i;
+	}
+	return -1;
+}
+
+void ApplicationManager::sendFigToBack(int index)
+{
+	CFigure* temp = FigList[index];
+
+	for (int i = index; i > 0; i--)
+	{
+		FigList[i] = FigList[i - 1];
+	}
+
+	FigList[0] = temp;
+	temp = NULL;
+}
+
+void ApplicationManager::sendFigToFront(int index)
+{
+	CFigure* temp = FigList[index];
+
+	for (int i = index; i < FigCount - 1; i++)
+	{
+		FigList[i] = FigList[i + 1];
+	}
+
+	FigList[FigCount - 1] = temp;
+	temp = NULL;
+}
+
 
 //Return a pointer to the interface
 GUI *ApplicationManager::GetGUI() const

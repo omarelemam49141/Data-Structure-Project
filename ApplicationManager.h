@@ -47,6 +47,10 @@ public:
 	void DeleteFigureAndRearrange(CFigure* pFig, int index);
 	//omar
 	bool DeleteSelectedObjects();
+	//BringToFront/back
+	int ApplicationManager::GetSelectedFigureIndex();
+	void ApplicationManager::sendFigToFront(int index);
+	void ApplicationManager::sendFigToBack(int index);
 };
 
 #endif

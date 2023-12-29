@@ -175,6 +175,12 @@
     <ClCompile Include="ActionDelete.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
+    <ClCompile Include="ActionSendToBack.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionSendToFront.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -287,6 +293,12 @@
       <Filter>Action Classes</Filter>
     </ClInclude>
     <ClInclude Include="ActionDelete.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionSendToBack.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionSendToFront.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
   </ItemGroup>
