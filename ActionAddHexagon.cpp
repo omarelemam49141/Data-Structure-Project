@@ -58,7 +58,7 @@ void ActionAddHexagon::Execute()
     }
 
     // Step 3 - Create a hexagon with the parameters read from the user
-    CFigure* hexagon = new CHexagon(modifiedXCoords, modifiedYCoords, vertexes, HexGfxInfo);
+    CHexagon* hexagon = new CHexagon(modifiedXCoords, modifiedYCoords, vertexes, HexGfxInfo);
 
     // Step 3.1 - Determine the bounding box of the hexagon
     int minX = *min_element(modifiedXCoords, modifiedXCoords + vertexes);

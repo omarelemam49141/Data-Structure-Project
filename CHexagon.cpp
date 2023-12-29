@@ -1,18 +1,9 @@
 #include "CHexagon.h"
-#include <iostream>
-#include <fstream>
-using namespace std;
 CHexagon::CHexagon(int *_xCoords, int* _yCoords, int _vertexes, GfxInfo FigureGfxInfo) :CFigure(FigureGfxInfo)
 {
     xCoordinates = _xCoords;
     yCoordinates = _yCoords;
 	vertexes = _vertexes;
-}
-
-CHexagon::CHexagon() {
-    xCoordinates = new int[6];
-    yCoordinates = new int[6];
-    vertexes = 6;
 }
 
 
@@ -59,47 +50,25 @@ string CHexagon::GetInfo()
         + " - vertexes count is: " + to_string(vertexes);
 }
 
-//asma save
-void CHexagon::Save(ofstream& OutFile) {
-    OutFile << "CHexagon\t";
-    OutFile << this->vertexes << "\t";
-    for (int i = 0; i < vertexes; i++) {
-        OutFile << this->yCoordinates[i] << "\t";
+//omar
+void CHexagon::resizeMe(int factor)
+{
+    // Calculate the center of the hexagon
+    double centerX = 0, centerY = 0;
+    for (int i = 0; i < vertexes; ++i) {
+        centerX += xCoordinates[i];
+        centerY += yCoordinates[i];
     }
-    for (int i = 0; i < vertexes; i++) {
-        OutFile << this->xCoordinates[i] << "\t";
+    centerX /= vertexes;
+    centerY /= vertexes;
+
+    // Resize each vertex based on the factor
+    for (int i = 0; i < vertexes; ++i) {
+        double dx = xCoordinates[i] - centerX;
+        double dy = yCoordinates[i] - centerY;
+
+        // Resize the distance from the center by the factor
+        xCoordinates[i] = centerX + factor * dx;
+        yCoordinates[i] = centerY + factor * dy;
     }
-
-    OutFile << ColorString(this->FigGfxInfo.DrawClr) << "\t";
-
-
-
-    if (this->FigGfxInfo.isFilled)
-        OutFile << this->ColorString(this->FigGfxInfo.FillClr) << "\n";
-    else
-        OutFile << "NO_FILL\n";
-}
-
-void CHexagon::Load(ifstream& Infile) {
-    string hexagonData;
-    Infile >> vertexes;
-    yCoordinates = new int[vertexes];
-    xCoordinates = new int[vertexes];
-    for (int i = 0; i < vertexes; i++) {
-        Infile >> yCoordinates[i];
-    }
-    for (int i = 0; i < vertexes; i++) {
-        Infile >> xCoordinates[i];
-    }
-
-    Infile >> hexagonData;
-    FigGfxInfo.DrawClr = ColorObject(hexagonData);
-
-    Infile >> hexagonData;
-    FigGfxInfo.FillClr = ColorObject(hexagonData);
-    FigGfxInfo.isFilled = true;
-
-    this->show();
-    this->FigGfxInfo.BorderWdth = 3; //pass 3 as default value for borderWidth
-    this->SetSelected(false);
 }

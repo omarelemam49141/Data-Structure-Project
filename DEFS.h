@@ -43,8 +43,6 @@ struct GfxInfo	//Graphical info of each figure (you may add more members)
 	bool isFilled;	//Figure Filled or not
 	int BorderWdth;	//Width of figure borders
 
-	bool IsHidden; 
-
 };
 
 #endif

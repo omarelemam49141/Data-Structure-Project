@@ -1,5 +1,18 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  GUI.cpp
-  ActionAddEllipse.cpp
+  ApplicationManager.cpp
+  ActionSendToFront.cpp
+  ActionSendToBack.cpp
   Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+  ActionAddSquare.cpp
+  ActionSelect.cpp
+  ActionDelete.cpp
+  ActionChngFillClr.cpp
+  ActionChngFigureClr.cpp
+  ActionChngDrawClr.cpp
+  ActionChngBGClr.cpp
+  ActionAddHexagon.cpp
+  ActionAddEllipse.cpp
+ActionAddEllipse.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   PT-Project.vcxproj -> D:\ITI\DataStructure\Version2\ProjectTeamMerge - 3\Debug\PT Project.exe
